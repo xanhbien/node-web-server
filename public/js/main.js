@@ -1,6 +1,3 @@
-console.log('File js loaded');
-
-
 const form     = document.querySelector("form")
 const inputLocation = document.getElementById("location")
 const messageOne = document.querySelector('#message-1')
