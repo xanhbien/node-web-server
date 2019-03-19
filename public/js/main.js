@@ -6,7 +6,7 @@ const messageTwo = document.querySelector('#message-2')
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-fetch("http://localhost:3000/weather?address="+ inputLocation.value).then((response) => {
+fetch("/weather?address="+ inputLocation.value).then((response) => {
   response.json().then((data) => {
       if(data.error){
         messageOne.textContent = data.error
