@@ -17,9 +17,10 @@ const forecast = (latitude, longitude, callback)=> {
     
         }else {
 
-        const cunrentlyDegrees = body.currently.temperature
-        const cunrentlyPrecipIntensity = body.currently.precipIntensity
-        callback(undefined, 'It is currently ' + cunrentlyDegrees + ' degrees out. There is a ' + cunrentlyPrecipIntensity +  '% chance of rain.')
+        const currentlyDegrees = body.currently.temperature
+        const currentlyPrecipIntensity = body.currently.precipIntensity
+        const currentlySummary  = body.currently.summary
+        callback(undefined, 'Summary: ' + currentlySummary + '. It is currently ' + currentlyDegrees + ' degrees out. There is a ' + currentlyPrecipIntensity +  '% chance of rain.')
         
     }
     })
